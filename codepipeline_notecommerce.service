@@ -1,16 +1,14 @@
-[Unit]  
+[Unit]
 Description=codepipeline service for notecommerce
 After=network.target
 
-[Service]  
-WorkingDirectory=/codepipeline    
+[Service]
+User=root
+WorkingDirectory=/codepipeline
 ExecStart=/bin/bash -c 'cd /codepipeline && /usr/local/go/bin/go run app/main.go notecommerce'
-
-Type=simple
+# optional items below
 Restart=always
-RestartSec=1
+RestartSec=3
 
-KillSignal=SIGINT
-
-[Install]      
-WantedBy=multi-user.target  
+[Install]
+WantedBy=multi-user.target
