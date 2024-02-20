@@ -4,7 +4,7 @@ After=network.target
 
 [Service]  
 WorkingDirectory=/codepipeline    
-ExecStart=/bin/bash -c 'cd /codepipeline && /usr/local/go/bin/go app/main.go notecommerce'
+ExecStart=/bin/bash -c 'cd /codepipeline && /usr/local/go/bin/go run app/main.go notecommerce'
 
 Type=simple
 Restart=always
