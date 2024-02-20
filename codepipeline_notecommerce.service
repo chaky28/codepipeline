@@ -2,14 +2,13 @@
 Description=codepipeline service for notecommerce
 After=network.target
 
-[Service]      
-ExecStart=/usr/local/go/bin/go app/main.go notecommerce
-WorkingDirectory=/codepipeline
+[Service]  
+WorkingDirectory=/codepipeline    
+ExecStart=/bin/bash -c 'cd /notecommerce && /usr/local/go/bin/go app/main.go notecommerce'
 
 Type=simple
 Restart=always
 RestartSec=1
-User=ubuntu   
 
 KillSignal=SIGINT
 
