@@ -3,7 +3,7 @@ Description=codepipeline service for notecommerce
 After=network.target
 
 [Service]      
-ExecStart=/usr/bin/go app/main.go notecommerce
+ExecStart=/usr/local/go/bin/go app/main.go notecommerce
 WorkingDirectory=/codepipeline
 
 Type=simple
