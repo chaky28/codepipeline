@@ -1,0 +1,57 @@
+{
+    "commands": [
+        {
+            "name": "git",
+            "args": [
+                "clone",
+                "https://github.com/chaky28/notecommerce.git", 
+                "notecommerce"
+            ],
+            "go": true
+        },
+        {
+            "name": "docker",
+            "args": [
+                "stop",
+                "notecommerce"
+            ]
+        },
+        {
+            "name": "true",
+            "args": [],
+            "go": true
+        },
+        {
+            "name": "docker",
+            "args": [
+                "image",
+                "rm",
+                "notecommerce:v1"
+            ]
+        },
+        {
+            "name": "true",
+            "args": [],
+            "go": true
+        },
+        {
+            "name": "docker",
+            "args": [
+                "build",
+                "--rm",
+                "-t",
+                "notecommerce:v1",
+                "notecommerce"
+            ],
+            "go": true
+        },
+        {
+            "name": "rm",
+            "args": [
+                "-r",
+                "notecommerce"
+            ],
+            "go": true
+        }
+    ]
+}

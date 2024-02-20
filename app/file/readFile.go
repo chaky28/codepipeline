@@ -9,7 +9,7 @@ import (
 )
 
 func ReadFile(fileLocation string) string {
-	fmt.Println("Reading file from ", fileLocation)
+	fmt.Println("Reading file from", fileLocation)
 
 	file, err := os.Open(fileLocation)
 	if err != nil {

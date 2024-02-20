@@ -1,0 +1,18 @@
+{
+    "commands": [
+        {
+            "name": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-d",
+                "--name",
+                "notecommerce",
+                "-p",
+                "8080:8080",
+                "notecommerce:v1"
+            ],
+            "go": true
+        }
+    ]
+}

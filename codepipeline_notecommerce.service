@@ -1,0 +1,17 @@
+[Unit]  
+Description=codepipeline service for notecommerce
+After=network.target
+
+[Service]      
+ExecStart=/usr/bin/go app/main.go notecommerce
+WorkingDirectory=/codepipeline
+
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu   
+
+KillSignal=SIGINT
+
+[Install]      
+WantedBy=multi-user.target  
