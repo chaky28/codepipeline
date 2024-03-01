@@ -14,7 +14,7 @@ import (
 var lastPush time.Time
 
 func main() {
-	fileData := file.ReadFile("/ghcredentials.txt")
+	fileData := file.ReadFile("/credentials/ghcredentials.txt")
 	user, token := file.GetUserAndTokenFromFileData(fileData)
 	fmt.Println(os.Args[1])
 
