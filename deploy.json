@@ -6,6 +6,8 @@
                 "run",
                 "--rm",
                 "-d",
+                "--mount",
+                "type=bind,source=/credentials,target=/host_directories/credentials",
                 "--name",
                 "notecommerce",
                 "-p",
@@ -16,3 +18,4 @@
         }
     ]
 }
+ 
