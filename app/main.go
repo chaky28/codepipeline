@@ -24,6 +24,7 @@ func main() {
 		Name:  os.Args[1],
 		Ctx:   context.Background(),
 	}
+
 	repo.SetClient()
 
 	lastPush = repo.GetLastPush()
